@@ -1,0 +1,14 @@
+program zadanie1;
+
+procedure PrintSequence(n: Integer);
+begin
+  if n < 0 then
+    Exit;
+  writeln(n);
+  PrintSequence(n - 2);
+end;
+
+begin
+  writeln('Последовательность:');
+  PrintSequence(25);
+end.
