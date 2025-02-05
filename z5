@@ -1,0 +1,23 @@
+program zadanie5;
+
+procedure FindGCD(a, b: Integer; var gcd: Integer);
+begin
+  if b = 0 then
+    gcd := a
+  else
+    FindGCD(b, a mod b, gcd);
+end;
+
+var
+  num1, num2, result: Integer;
+
+begin
+  writeln('Введите первое число:');
+  readln(num1);
+  writeln('Введите второе число:');
+  readln(num2);
+
+  FindGCD(num1, num2, result);
+
+  writeln('НОД(', num1, ', ', num2, ') = ', result);
+end.
