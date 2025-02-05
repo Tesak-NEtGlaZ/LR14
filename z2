@@ -1,0 +1,25 @@
+program zadanie2;
+
+function SumTo(n: Integer): Integer;
+begin
+  if n = 1 then
+    SumTo := 1
+  else
+    SumTo := n + SumTo(n - 1);
+end;
+
+var
+  number, result: Integer;
+
+begin
+  writeln('Введите число n:');
+  readln(number);
+
+  if number <= 0 then
+    writeln('Число должно быть положительным!')
+  else
+  begin
+    result := SumTo(number);
+    writeln('Сумма чисел от 1 до ', number, ' равна ', result);
+  end;
+end.
