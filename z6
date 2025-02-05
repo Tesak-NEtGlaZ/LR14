@@ -1,0 +1,18 @@
+program zadanie6;
+
+procedure fib(prev, curr, count: Integer);
+begin
+  if count > 0 then
+  begin
+    writeln(curr);
+    fib(curr, prev + curr, count - 1);
+  end;
+end;
+
+var
+  n: Integer;
+
+begin
+  n := 10;
+  fib(1, 1, n);
+end.
