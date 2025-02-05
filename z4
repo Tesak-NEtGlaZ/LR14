@@ -1,0 +1,13 @@
+program zadanie4;
+
+procedure LoopFor(i, n: Integer);
+begin
+  if i > n then
+    Exit;
+  writeln('Привет ', i);
+  LoopFor(i + 1, n);
+end;
+
+begin
+  LoopFor(1, 10);
+end.
