@@ -2,10 +2,15 @@ program zadanie4;
 
 procedure LoopFor(i, n: Integer);
 begin
+  // 1. Базовый случай - условие выхода
   if i > n then
     Exit;
+
+  // 2. Действие - полезная работа
   writeln('Привет ', i);
-  LoopFor(i + 1, n);
+
+  // 3. Рекурсивный вызов с редукцией
+  LoopFor(i + 1, n); // i+1 - шаг редукции
 end;
 
 begin
