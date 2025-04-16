@@ -2,9 +2,15 @@ program zadanie6;
 
 procedure fib(prev, curr, count: Integer);
 begin
+  // 1. Базовый случай - условие выхода
   if count > 0 then
   begin
+    // 2. Действие - вывод текущего числа
     writeln(curr);
+    
+    // 3. Рекурсивный вызов с редукцией:
+    //    - обновление значений (prev, curr)
+    //    - уменьшение счетчика (count-1)
     fib(curr, prev + curr, count - 1);
   end;
 end;
@@ -14,5 +20,5 @@ var
 
 begin
   n := 10;
-  fib(1, 1, n);
+  fib(1, 1, n); // Инициализация
 end.
