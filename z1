@@ -2,9 +2,14 @@ program zadanie1;
 
 procedure PrintSequence(n: Integer);
 begin
+  // 1. Базовый случай - условие выхода
   if n < 0 then
     Exit;
+
+  // 2. Действие - обработка текущего значения
   writeln(n);
+
+  // 3. Рекурсивный вызов с редукцией - переход к следующему шагу
   PrintSequence(n - 2);
 end;
 
