@@ -1,19 +1,17 @@
 program zadanie1;
 
-procedure PrintSequence(n: Integer);
+procedure PrintSequence(n: integer);
 begin
-  // 1. Базовый случай - условие выхода
-  if n < 0 then
-    Exit;
-
-  // 2. Действие - обработка текущего значения
-  writeln(n);
-
-  // 3. Рекурсивный вызов с редукцией - переход к следующему шагу
-  PrintSequence(n - 2);
+  if n < 0 then exit;
+  Write(n);                 
+  if n <> 0 then Write(' ');
+  if n = 1 then
+    PrintSequence(0)
+  else
+    PrintSequence(n - 2);
 end;
 
 begin
-  writeln('Последовательность:');
   PrintSequence(25);
+  Readln;
 end.
